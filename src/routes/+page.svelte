@@ -36,17 +36,6 @@
 	<title>Chattengauer - Musik aus der Region</title>
 </svelte:head>
 
-<header class="flex items-center justify-between border-b border-slate-300 p-4">
-	<hgroup>
-		<h1 class="text-lg">Chattengauer</h1>
-		<h2 class="text-xs text-slate-500">Dein Musikversion in Gudensberg</h2>
-	</hgroup>
-	<div class="space-y-2">
-		<span class="block h-0.5 w-8 bg-gray-600" />
-		<span class="block h-0.5 w-8 bg-gray-600" />
-		<span class="block h-0.5 w-5 bg-gray-600" />
-	</div>
-</header>
 <figure>
 	<img src="https://via.placeholder.com/400x150?text=Cooles+Bild" alt="" />
 </figure>
@@ -54,7 +43,10 @@
 <section class="flex flex-col gap-2 p-4">
 	<p class="text-sm">
 		Du spielst ein Instrument oder möchtest es lernen? Bei uns bist du richtig aufgehoben mit
-		unseren verschiedenen Orchestern: ...
+		unseren verschiedenen Orchestern: Eine
+		<a class="text-blue-700" href="/blaeserklasse">Bläserklasse</a>
+		für unsere jüngsten Mitglieder und das
+		<a class="text-blue-700" href="/orchester">Hauptorchester</a>.
 	</p>
 </section>
 
@@ -84,7 +76,7 @@
 			<p class="text-sm text-slate-600">
 				Mit einer vollen Kirche konnten wir unser Jahr 2023 gebührend ausklingen lassen. Für unsere
 				jüngsten Mitglieder war dies das erste Adventskonzert von vielen, die noch kommen werden!
-				<span class="ml-1 inline-block h-2 w-2 rounded-sm bg-red-400" />
+				<span class="ml-1 inline-block h-2 w-2 rounded-sm bg-red-500" />
 			</p>
 			<footer class="text-right text-sm">
 				<a href="#" class="font-bold text-red-500">
@@ -120,50 +112,3 @@
 		</footer>
 	</article>
 </section>
-
-<footer class="mt-3 space-y-6 bg-slate-800 px-4 py-6 text-white">
-	<article>
-		<header>
-			<h1 class="font-bold uppercase">
-				Kontakt <span class="ml-1 inline-block h-2 w-2 rounded-sm bg-red-500" />
-			</h1>
-			<div class="my-1 w-1/4 border-b-2 border-red-500" />
-		</header>
-		<p class="mt-2 text-sm">
-			<span class="block">
-				<User class="mr-1 inline-block" size={16} />
-				Martin Salfer
-			</span>
-			<a class="block" href="mailto:original.chattengauer@gmx.de">
-				<Mail class="mr-1 inline-block" size={16} />
-				original.chattengauer@gmx.de
-			</a>
-			<a class="block" href="tel:+4915152763235">
-				<Phone class="mr-1 inline-block" size={16} />
-				0151 52763235
-			</a>
-		</p>
-	</article>
-	<article>
-		<header>
-			<h1 class="font-bold uppercase">
-				Bankverbindung <span class="ml-1 inline-block h-2 w-2 rounded-sm bg-red-500" />
-			</h1>
-			<div class="my-1 w-1/4 border-b-2 border-red-500" />
-		</header>
-		<table class="mt-2 text-sm">
-			<tr>
-				<td>KSK Schwalm Eder:</td>
-				<td>DE50 5205 2154 1139 3241 05</td>
-			</tr>
-			<tr>
-				<td> VR PartnerBank eG:</td>
-				<td>DE50 5206 2601 0000 6477 64</td>
-			</tr>
-		</table>
-	</article>
-	<ul class="flex gap-4">
-		<li><a class="text-xs font-bold" href="/datenschutz">Datenschutz</a></li>
-		<li><a class="text-xs font-bold" href="/datenschutz">Impressum</a></li>
-	</ul>
-</footer>
