@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ChevronRight, Mail, Phone, User } from 'lucide-svelte';
+	import { ChevronRight } from 'lucide-svelte';
 
 	const gigs: {
 		weekday: string;
@@ -65,7 +65,6 @@
 				<img
 					src="https://www.original-chattengauer.de/uploads/imgs/221216_adventskonzert_gruppenbild.jpg"
 					alt=""
-					class=""
 				/>
 				<figcaption
 					class="absolute inset-x-0 bottom-0 p-3 text-sm font-semibold text-slate-200 backdrop-blur"
@@ -79,9 +78,9 @@
 				<span class="ml-1 inline-block h-2 w-2 rounded-sm bg-red-500" />
 			</p>
 			<footer class="text-right text-sm">
-				<a href="#" class="font-bold text-red-500">
+				<button class="font-bold text-red-500">
 					Mehr Bilder <ChevronRight class="inline-block align-middle" size={16} />
-				</a>
+				</button>
 			</footer>
 		</article>
 	{/each}
@@ -106,7 +105,7 @@
 		{/each}
 
 		<footer class="text-right text-sm">
-			<a href="#" class="font-bold text-red-500">
+			<a href="/termine" class="font-bold text-red-500">
 				Alle Termine <ChevronRight class="inline-block align-middle" size={16} />
 			</a>
 		</footer>
