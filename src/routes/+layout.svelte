@@ -26,7 +26,8 @@
 			</h1>
 			<div class="my-1 w-1/4 border-b-2 border-red-500" />
 		</header>
-		<p class="mt-2 text-xs">
+
+		<p class="mt-2 space-y-1 text-xs">
 			<span class="block">
 				<User class="mr-1 inline-block" size={16} />
 				Martin Salfer
@@ -49,16 +50,13 @@
 			</h1>
 			<div class="my-1 w-1/4 border-b-2 border-red-500" />
 		</header>
-		<table class="mt-2 text-xs">
-			<tr>
-				<td>KSK Schwalm Eder:</td>
-				<td>DE50 5205 2154 1139 3241 05</td>
-			</tr>
-			<tr>
-				<td> VR PartnerBank eG:</td>
-				<td>DE50 5206 2601 0000 6477 64</td>
-			</tr>
-		</table>
+
+		<div class="mt-2 inline-grid grid-cols-[auto_auto] gap-x-3 gap-y-1 text-xs">
+			<div>KSK Schwalm Eder:</div>
+			<div>DE50 5205 2154 1139 3241 05</div>
+			<div>VR PartnerBank eG:</div>
+			<div>DE50 5206 2601 0000 6477 64</div>
+		</div>
 	</article>
 
 	<ul class="flex gap-4">
