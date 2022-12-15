@@ -10,8 +10,8 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"test:unit": "vitest",
-		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"lint": "prettier --ignore-path .linterignore --plugin-search-dir . --check . && eslint --ignore-path .linterignore .",
+		"format": "prettier --ignore-path .linterignore --plugin-search-dir . --write . && eslint --ignore-path .linterignore . --fix"
 	},
 	"devDependencies": {
 		"@fontsource/open-sans": "^4.5.13",
