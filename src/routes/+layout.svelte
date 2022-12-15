@@ -6,7 +6,7 @@
 
 <header class="flex items-center justify-between border-b border-slate-300 p-4">
 	<hgroup>
-		<h1 class="text-lg">Chattengauer</h1>
+		<h1 class="text-lg"><a href="/">Chattengauer</a></h1>
 		<h2 class="text-xs text-slate-500">Dein Musikversion in Gudensberg</h2>
 	</hgroup>
 	<div class="space-y-2">
@@ -18,7 +18,7 @@
 
 <slot />
 
-<footer class="mt-3 space-y-6 bg-slate-800 px-4 py-6 text-white">
+<footer class="mt-8 space-y-6 bg-slate-800 px-4 py-6 text-white">
 	<article>
 		<header>
 			<h1 class="text-sm font-bold uppercase">
