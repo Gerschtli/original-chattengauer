@@ -1,13 +1,12 @@
 <script lang="ts">
+	import Banner from '$lib/Banner.svelte';
 </script>
 
 <svelte:head>
 	<title>Bläserklasse Chattengauer - Musik aus der Region</title>
 </svelte:head>
 
-<figure>
-	<img src="https://via.placeholder.com/400x150?text=Cooles+Bild" alt="" />
-</figure>
+<Banner />
 
 <section class="mt-3 space-y-2">
 	<header class="flex flex-col items-center px-4 pt-4">

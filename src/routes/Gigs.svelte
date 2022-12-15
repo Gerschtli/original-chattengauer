@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Banner from '$lib/Banner.svelte';
 	import Gig from '$lib/Gig.svelte';
+	import { ChevronRight } from 'lucide-svelte';
 
 	const gigs: {
 		weekday: string;
@@ -33,12 +33,6 @@
 	];
 </script>
 
-<svelte:head>
-	<title>Termine Chattengauer - Musik aus der Region</title>
-</svelte:head>
-
-<Banner />
-
 <section class="mt-3 space-y-2">
 	<header class="flex flex-col items-center px-4 pt-4">
 		<h1 class="text-md text-center font-semibold uppercase text-slate-700">
@@ -49,13 +43,14 @@
 	</header>
 
 	<article class="px-4">
-		<h2 class="my-3 text-xs font-semibold uppercase text-slate-700">November 2022</h2>
 		{#each gigs as gig}
 			<Gig {gig} />
 		{/each}
-		<h2 class="my-3 text-xs font-semibold uppercase text-slate-700">Dezember 2022</h2>
-		{#each gigs as gig}
-			<Gig {gig} />
-		{/each}
+
+		<footer class="text-right text-sm">
+			<a href="/termine" class="font-bold text-red-500">
+				Alle Termine <ChevronRight class="inline-block align-middle" size={16} />
+			</a>
+		</footer>
 	</article>
 </section>
