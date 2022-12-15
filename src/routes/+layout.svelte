@@ -1,6 +1,6 @@
 <script>
 	import '@fontsource/open-sans';
-	import { Mail, Phone, User } from 'lucide-svelte';
+	import { Mail, Menu, Phone, User } from 'lucide-svelte';
 	import '../app.postcss';
 </script>
 
@@ -9,10 +9,9 @@
 		<h1 class="text-lg"><a href="/">Chattengauer</a></h1>
 		<h2 class="text-xs text-slate-500">Dein Musikversion in Gudensberg</h2>
 	</hgroup>
-	<div class="space-y-2">
-		<span class="block h-0.5 w-8 bg-gray-600" />
-		<span class="block h-0.5 w-8 bg-gray-600" />
-		<span class="block h-0.5 w-5 bg-gray-600" />
+
+	<div class="ml-4">
+		<Menu size={32} />
 	</div>
 </header>
 
