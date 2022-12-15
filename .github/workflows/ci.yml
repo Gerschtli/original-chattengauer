@@ -1,0 +1,71 @@
+name: CI/CD
+on:
+  pull_request:
+  push:
+  schedule:
+    - cron: 0 0 * * 1
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: nix develop --command bash -eo pipefail {0}
+
+jobs:
+  app:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup pipeline
+        uses: ./.github/actions/setup
+        with:
+          CACHIX_SIGNING_KEY: ${{ secrets.CACHIX_SIGNING_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - run: pnpm install
+
+      - run: pnpm run lint
+
+      - run: pnpm run check
+
+      - run: pnpm run test
+
+  nix:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup pipeline
+        uses: ./.github/actions/setup
+        with:
+          CACHIX_SIGNING_KEY: ${{ secrets.CACHIX_SIGNING_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - run: nix flake check
+
+      # keep playwright pnpm library and nixpkgs package in sync
+      - name: Test playwright version
+        run: |
+          playwright_nix="$(nix eval --raw .#playwright.version)"
+          playwright_pnpm="$(jq --raw-output '.devDependencies."@playwright/test"' package.json)"
+
+          echo "playwright_nix:  $playwright_nix"
+          echo "playwright_pnpm: $playwright_pnpm"
+
+          [[ "$playwright_nix" == "$playwright_pnpm" ]]

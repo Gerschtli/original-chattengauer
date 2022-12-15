@@ -11,9 +11,14 @@
     {
       devShells.${system}.default = pkgs.mkShell {
         buildInputs = [
+          pkgs.jq
           pkgs.nodejs_latest
           pkgs.nodePackages_latest.pnpm
         ];
+
+        PLAYWRIGHT_BROWSERS_PATH = pkgs.playwright.browsers;
       };
+
+      packages.${system} = { inherit (pkgs) playwright; };
     };
 }
