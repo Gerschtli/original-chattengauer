@@ -1,18 +1,15 @@
 inputs:
   CACHIX_SIGNING_KEY:
     required: true
-  GITHUB_TOKEN:
-    required: true
 
 runs:
   using: composite
   steps:
     - name: Install nix
-      uses: cachix/install-nix-action@v18
+      uses: cachix/install-nix-action@v19
       with:
         extra_nix_config: |
           show-trace = true
-          access-tokens = github.com=${{ inputs.GITHUB_TOKEN }}
 
     - name: Setup cachix
       uses: cachix/cachix-action@v12

@@ -22,7 +22,6 @@ jobs:
         uses: ./.github/actions/setup
         with:
           CACHIX_SIGNING_KEY: ${{ secrets.CACHIX_SIGNING_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Get pnpm store directory
         id: pnpm-cache
@@ -55,7 +54,6 @@ jobs:
         uses: ./.github/actions/setup
         with:
           CACHIX_SIGNING_KEY: ${{ secrets.CACHIX_SIGNING_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - run: nix flake check
 
