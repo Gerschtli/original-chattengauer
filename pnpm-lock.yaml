@@ -11,7 +11,7 @@ specifiers:
   eslint: ^8.32.0
   eslint-config-prettier: ^8.6.0
   eslint-plugin-svelte3: ^4.0.0
-  lucide-svelte: ^0.107.0
+  lucide-svelte: ^0.125.0
   postcss: ^8.4.21
   postcss-load-config: ^4.0.1
   prettier: ^2.8.3
@@ -37,7 +37,7 @@ devDependencies:
   eslint: 8.32.0
   eslint-config-prettier: 8.6.0_eslint@8.32.0
   eslint-plugin-svelte3: 4.0.0_tmo5zkisvhu6htudosk5k7m6pu
-  lucide-svelte: 0.107.0_svelte@3.55.1
+  lucide-svelte: 0.125.0_svelte@3.55.1
   postcss: 8.4.21
   postcss-load-config: 4.0.1_postcss@8.4.21
   prettier: 2.8.3
@@ -1451,8 +1451,8 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /lucide-svelte/0.107.0_svelte@3.55.1:
-    resolution: {integrity: sha512-ogvDIb7URxdVals/+QBvx0RyEugD4j0jrd26N0Ie0t3UWC8M+xJFcQq46F0/gPQbelsc3ewlvvoX+sYuAuuGhg==}
+  /lucide-svelte/0.125.0_svelte@3.55.1:
+    resolution: {integrity: sha512-IP0uFGUBUe30H/dKhmvQbRkHQaFLM5klJljjLTCUSsrIAbGjPWkqPVjYUXl8VVqnFYLR9l8qJq1Bt4QYUq+hog==}
     peerDependencies:
       svelte: ^3.49.0
     dependencies:
