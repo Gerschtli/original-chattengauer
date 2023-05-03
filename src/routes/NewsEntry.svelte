@@ -57,10 +57,10 @@
 
 	<dialog
 		open={$overlayIsOpen}
-		class="fixed top-0 left-0 z-50 h-full w-full overflow-y-auto bg-white/80 p-0 backdrop-blur"
+		class="fixed left-0 top-0 z-50 h-full w-full overflow-y-auto bg-white/80 p-0 backdrop-blur"
 	>
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
-		<div class="absolute top-4 right-4 cursor-pointer" on:click={overlayToggle}>
+		<div class="absolute right-4 top-4 cursor-pointer" on:click={overlayToggle}>
 			<X size={32} />
 		</div>
 
