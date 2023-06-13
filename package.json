@@ -16,7 +16,7 @@
 		"format": "prettier --ignore-path .linterignore --plugin-search-dir . --write . && eslint --ignore-path .linterignore . --fix"
 	},
 	"devDependencies": {
-		"@fontsource/open-sans": "^4.5.14",
+		"@fontsource/open-sans": "^5.0.0",
 		"@playwright/test": "1.27.1",
 		"@sveltejs/adapter-auto": "^2.0.1",
 		"@sveltejs/kit": "^1.15.10",
