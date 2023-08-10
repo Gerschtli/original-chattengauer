@@ -16,7 +16,7 @@ specifiers:
   postcss-load-config: ^4.0.1
   prettier: ^2.8.8
   prettier-plugin-svelte: ^2.10.0
-  prettier-plugin-tailwindcss: ^0.2.8
+  prettier-plugin-tailwindcss: ^0.5.0
   svelte: ^3.58.0
   svelte-check: ^3.2.0
   svelte-preprocess: ^5.0.3
@@ -42,7 +42,7 @@ devDependencies:
   postcss-load-config: 4.0.1_postcss@8.4.23
   prettier: 2.8.8
   prettier-plugin-svelte: 2.10.0_f6pmxuoopicxy7gb3t3nvoipzy
-  prettier-plugin-tailwindcss: 0.2.8_m5fr5uleushlp6modptdmhy2ru
+  prettier-plugin-tailwindcss: 0.5.1_m5fr5uleushlp6modptdmhy2ru
   svelte: 3.58.0
   svelte-check: 3.2.0_z4qdfiwkj4lltp3x24e5qnnebi
   svelte-preprocess: 5.0.3_23hegejj6wohnngylwfkhanmlu
@@ -1807,20 +1807,21 @@ packages:
       svelte: 3.58.0
     dev: true
 
-  /prettier-plugin-tailwindcss/0.2.8_m5fr5uleushlp6modptdmhy2ru:
-    resolution: {integrity: sha512-KgPcEnJeIijlMjsA6WwYgRs5rh3/q76oInqtMXBA/EMcamrcYJpyhtRhyX1ayT9hnHlHTuO8sIifHF10WuSDKg==}
-    engines: {node: '>=12.17.0'}
+  /prettier-plugin-tailwindcss/0.5.1_m5fr5uleushlp6modptdmhy2ru:
+    resolution: {integrity: sha512-dvJRVoYlzTXa7mD1DooUl0m+7XXMiaClTgZATah27x0vqWAnmoTdndGdpRZDUXl9chk1FFiaQ0ncquUOKBhMoQ==}
+    engines: {node: '>=14.21.3'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
       '@prettier/plugin-pug': '*'
       '@shopify/prettier-plugin-liquid': '*'
       '@shufo/prettier-plugin-blade': '*'
       '@trivago/prettier-plugin-sort-imports': '*'
-      prettier: '>=2.2.0'
+      prettier: ^3.0
       prettier-plugin-astro: '*'
       prettier-plugin-css-order: '*'
       prettier-plugin-import-sort: '*'
       prettier-plugin-jsdoc: '*'
+      prettier-plugin-marko: '*'
       prettier-plugin-organize-attributes: '*'
       prettier-plugin-organize-imports: '*'
       prettier-plugin-style-order: '*'
@@ -1844,6 +1845,8 @@ packages:
       prettier-plugin-import-sort:
         optional: true
       prettier-plugin-jsdoc:
+        optional: true
+      prettier-plugin-marko:
         optional: true
       prettier-plugin-organize-attributes:
         optional: true
