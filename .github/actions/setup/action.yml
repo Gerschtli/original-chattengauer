@@ -12,7 +12,7 @@ runs:
           show-trace = true
 
     - name: Setup cachix
-      uses: cachix/cachix-action@v12
+      uses: cachix/cachix-action@v14
       with:
         name: gerschtli
         signingKey: ${{ inputs.CACHIX_SIGNING_KEY }}
